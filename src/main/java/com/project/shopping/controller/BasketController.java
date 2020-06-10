@@ -40,14 +40,14 @@ public class BasketController {
 		}
 		model.addAttribute("theBaskets", theBaskets);
 
-		return "/products/basket-list";
+		return "products/basket-list";
 	}
 
 	@GetMapping("/showFormForAdd")
 	public String showFormForAdd(Model model) {
 		Basket baskets = new Basket();
 		model.addAttribute("baskets", baskets);
-		return "/products/basket-form";
+		return "products/basket-form";
 	}
 
 	@PostMapping("/save")
