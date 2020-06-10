@@ -40,7 +40,7 @@ public class BasketController {
 		}
 		model.addAttribute("theBaskets", theBaskets);
 
-		return "products/basket-list";
+		return "/products/basket-list";
 	}
 
 	@GetMapping("/showFormForAdd")
