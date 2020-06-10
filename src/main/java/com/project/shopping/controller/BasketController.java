@@ -47,7 +47,7 @@ public class BasketController {
 	public String showFormForAdd(Model model) {
 		Basket baskets = new Basket();
 		model.addAttribute("baskets", baskets);
-		return "products/basket-form";
+		return "/products/basket-form";
 	}
 
 	@PostMapping("/save")
