@@ -48,7 +48,7 @@ public class ProductController {
 		Product product = productService.findById(prod_id);
 
 		model.addAttribute("product", product);
-		return "/products/product-form";	
+		return "products/product-form";	
 	}
 	
 	@GetMapping("/showFormForAdd")
@@ -58,7 +58,7 @@ public class ProductController {
 		basket.setBasket_id(basket_id);
 		product.setBasket(basket);
 		model.addAttribute("product", product);
-		return "/products/product-form";	
+		return "products/product-form";	
 	}
 	
 	
