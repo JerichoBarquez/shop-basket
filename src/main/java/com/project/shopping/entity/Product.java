@@ -12,8 +12,6 @@ import lombok.Setter;
 import lombok.ToString;
 
 @Entity
-@ToString
-@Table(name="product")
 public class Product {
 	
 	@Id @GeneratedValue @Getter @Setter
