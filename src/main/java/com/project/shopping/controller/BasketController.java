@@ -27,10 +27,11 @@ public class BasketController {
 	@GetMapping("/list")
 	public String listBasket(Model model) {
 		List<Product> listProd = null;
-		Double tot = 0.0;
+		
 		Double totalShop = 0.0;
 		List<Basket> theBaskets = basketService.findAll();
 		for (Basket basket : theBaskets) {
+			Double tot = 0.0;
 			listProd = productService.findByFKey(basket.getBasket_id());
 			for (Product prod : listProd) {
 				tot += prod.getPrice() * prod.getQty();
